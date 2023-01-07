@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Label } from "../common/Label/Label";
+
 export const SearchField = ({ value, onChange }) => {
   return (
     <Label>
@@ -13,6 +14,7 @@ export const SearchField = ({ value, onChange }) => {
     </Label>
   );
 };
+
 SearchField.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
