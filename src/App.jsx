@@ -56,11 +56,7 @@ class App extends Component {
         <SearchField value={this.state.filter} onChange={this.handleFilter} />
 
         <ContactsList
-          contacts={
-            this.filter
-              ? this.state.contacts
-              : this.filtredContacts(this.state.filter)
-          }
+          contacts={this.filtredContacts(this.state.filter)}
           onDelete={this.onDelete}
         />
       </Section>
