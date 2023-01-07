@@ -39,9 +39,11 @@ class App extends Component {
     });
   };
 
-  filtredContacts = (filterq) =>
+  filtredContacts = () =>
     this.state.contacts.filter((el) =>
-      el.name.toLocaleLowerCase().includes(filterq.toLocaleLowerCase())
+      el.name
+        .toLocaleLowerCase()
+        .includes(this.state.filter.toLocaleLowerCase())
     );
 
   render() {
@@ -56,7 +58,7 @@ class App extends Component {
         <SearchField value={this.state.filter} onChange={this.handleFilter} />
 
         <ContactsList
-          contacts={this.filtredContacts(this.state.filter)}
+          contacts={this.filtredContacts()}
           onDelete={this.onDelete}
         />
       </Section>
